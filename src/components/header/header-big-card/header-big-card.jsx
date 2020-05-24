@@ -6,7 +6,7 @@ import CardAuthor from '../../card-author'
 import CardDate from '../../card-date'
 
 export default function BigCard (props) {
-  const { title, imageUrl, description, date, author, id } = props
+  const { title, imageUrl, description, date, author, id } = props.article
 
   return (
     <Link to={`/${id}`}>
