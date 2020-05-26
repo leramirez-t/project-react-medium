@@ -9,7 +9,7 @@ import { Redirect } from "react-router-dom";
 import { LogIn as LogInService } from "../../services";
 
 // CSS
-import "./LogIn.css";
+import "./Login.css";
 
 export default class LogIn extends Component {
   constructor(props) {
@@ -53,15 +53,12 @@ export default class LogIn extends Component {
   render() {
     const { email, password, success } = this.state;
     return (
-      <div className="Container">
-        {success ? <Redirect to='/' /> : null }
-        <div>
-          <Header
-            title={"Inicio de sesión"}
-            description={"Inicia sesión para ver mas contenido"}
-          />
-          <div className={"Container"}>
-            <form onSubmit={this.handleSubmit}>
+      <div className="wrapper fadeInDown">
+        {success ? console.log('Exito') : null }
+        <div id="formContent">
+          <p>Welcome back.</p>
+          <p>Sign in to get personalized story recommendations, follow authors and topics you love, and interact with stories.</p>
+          <form onSubmit={this.handleSubmit}>
               <input
                 type={"email"}
                 value={email}
@@ -76,11 +73,16 @@ export default class LogIn extends Component {
                 name={"password"}
                 placeholder={"Password"}
               />
-              <button type="submit">LogIn</button>
+              <button type="submit">Log In</button>
             </form>
+          <div id="formFooter">
+            <p>To make Medium work, we log user data and share it with service providers.</p>
+            <p>Click “Log In” above to accept Medium’s 
+              <a className="underlineHover" href="https://policy.medium.com/medium-terms-of-service-9db0094a1e0f">Terms of Service</a> & <a className="underlineHover" href="https://policy.medium.com/medium-privacy-policy-f03bf92035c9">Privacy Policy</a>
+              .</p>
           </div>
         </div>
       </div>
-    );
+    )
   }
 }

@@ -4,13 +4,11 @@ import {
   Switch,
   Route,
 } from 'react-router-dom'
+import Login from './components/Login'
 
 function App () {
   return (
-    <Router>
-      <Switch>
-      </Switch>
-    </Router >
+    <Login />
   );
 }
 
