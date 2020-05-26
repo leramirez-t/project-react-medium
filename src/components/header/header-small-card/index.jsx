@@ -1,5 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import CardTitle from '../../card-title'
+import CardDescription from '../../card-description'
+import CardAuthor from '../../card-author'
+import CardDate from '../../card-date'
 
 export default function HeaderSmallCard (props) {
   const { title, imageUrl, description, date, author, id } = props.article
