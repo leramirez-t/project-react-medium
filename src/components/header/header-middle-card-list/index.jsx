@@ -8,8 +8,8 @@ export default function HeaderMiddleList (props) {
     <div className="row">
       {
         articles.map((article, index) => (
-          <div className="col12" key={index}>
-            <HeaderSmallCard article={articles} />
+          <div className="col-12" key={index}>
+            <HeaderSmallCard article={article} />
           </div>
         ))
       }
