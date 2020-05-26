@@ -1,5 +1,6 @@
 import React from 'react'
 import BigCard from './header-big-card/header-big-card'
+import HeaderMiddleList from './header-middle-card-list'
 
 export default function Header (props) {
   const { articles } = props
