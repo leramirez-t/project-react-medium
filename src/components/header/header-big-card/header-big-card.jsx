@@ -6,13 +6,13 @@ import CardAuthor from '../../Cards/card-author'
 import CardDate from '../../Cards/card-date'
 
 export default function BigCard (props) {
-  const { title, imageUrl, description, date, author, id } = props.article
+  const { title, image, description, date, author, id } = props.article
 
   return (
     <Link to={`/${id}`}>
       <div className="row">
         <div className="col-12">
-          <img src={imageUrl} alt="" />
+          <img src={image} alt="" width='100%' height='100%' />
         </div>
         <div className="col-12">
           <CardTitle title={title} />

@@ -5,6 +5,8 @@ import HeaderMiddleList from './header-middle-card-list'
 export default function Header (props) {
   const { articles } = props
 
+  console.log('[articles]:', articles)
+
   return (
     <div className="row">
       <div className="col-4 md-4">
