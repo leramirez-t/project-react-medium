@@ -13,12 +13,10 @@ function Article ({
 
 }){
     return(
-            <>
+            
+            
             <div className='row'>
-                <span className='aticle_title'>Popular on Medium</span>
-            </div>
-            <div className='row'>
-                <div className='container_card col-md-3'>
+                <div className='container_card col-md-6'>
                 <div className='style_card'>
                 <Link to='/ArticleBlog'>
                     <p className='container_info'><strong className='info_style'>{title}</strong></p>
@@ -29,7 +27,7 @@ function Article ({
                 
                 </div>
             </div>    
-            </>
+            
         )
     }
 

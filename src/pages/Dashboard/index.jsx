@@ -6,7 +6,8 @@ import HeaderHome from '../Home/components/Header'
 import BodyHome from '../Home/components/Body'
 import FooterHome from '../Home/components/Footer'
 import Header from '../../components/header'
-
+import Article from '../../components/body/article/index.jsx'
+import Articles from '../Home/components/Articles'
 export default class Dashboard extends Component {
     constructor (props) {
         super(props)
@@ -14,6 +15,7 @@ export default class Dashboard extends Component {
             articles: []
         }
         this._renderArticle = this._renderArticle.bind(this)
+        this.renderArt = this.renderArt.bind(this)
     }
 
     componentDidMount () {
@@ -48,6 +50,14 @@ export default class Dashboard extends Component {
         })
     }
 
+    renderArt(){
+        const { articles } = this.state;
+        console.log('[_render]:', articles)
+        return articles.slice(5).map(({ key, title, image, description, author, category, estimatedReadTime, date }) => {
+            return <Articles key={key} title={title} description={description} image={image} author={author} category={category} date={date} estimatedReadTime={estimatedReadTime} />
+        })
+    }
+
     render () {
         console.log('[state]:', this.state.articles)
         return (
@@ -66,8 +76,14 @@ export default class Dashboard extends Component {
                         <Header articles={this.state.articles.slice(0, 5)} />
                     }
                     <div className='row'>
-                        <div className='col-md-12'>
+                        <div className='col-md-6'>
                             {this._renderArticle()}
+                            
+                        </div>
+                    
+                        <div className='col-md-6'>
+                        <span className='aticle_title'>Popular on Medium</span>
+                            {this.renderArt()}
                         </div>
                     </div>
                 </div>
