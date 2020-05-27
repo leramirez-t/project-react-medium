@@ -15,7 +15,7 @@ function CardBody({
     return(
 
             <div className='row'>
-                <div className='container_card col-md-4'>
+                <div className='container_card col-md-6'>
                 <div className='style_card'>
                 <p className='title_style'>Based on your reading history</p>
                     <p className='container_info'><strong className='info_style'>{title}</strong></p>
