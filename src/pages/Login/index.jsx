@@ -63,7 +63,7 @@ export default class LogIn extends Component {
           <HeaderHome />
           <br/>
           <div className="wrapper fadeInDown">
-            {success ? console.log('Exito') : null }
+            {success ? <Redirect to='/' /> : null }
             <div id="formContent">
               <p>Welcome back.</p>
               <p>Sign in to get personalized story recommendations, follow authors and topics you love, and interact with stories.</p>

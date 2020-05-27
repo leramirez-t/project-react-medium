@@ -45,9 +45,15 @@ export default class App extends Component {
         <div className="App">
           <Switch>
             <Route exact path="/">
+              {
+                userLogedIn ? <div></div> : <Home />
+              }
               <Home />
             </Route>
             <Route exact path="/auth/login">
+              <Login />
+            </Route>
+            <Route exact path="/dashboard">
               <Login />
             </Route>
           </Switch>
