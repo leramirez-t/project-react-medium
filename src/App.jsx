@@ -61,6 +61,7 @@ export default class App extends Component {
       </Router>
     );
   }
+
 }
 
 //<Menu logOut={this.logOut} userLogedIn={userLogedIn} /> 

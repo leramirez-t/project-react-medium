@@ -1,0 +1,66 @@
+.card_title{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.card_principal{
+    background-color: #fafafa;
+}
+
+.button_blog{
+    background-color: #03a87c;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    white-space: nowrap;
+    width: 120px;
+    height: 40px;
+}
+
+.img_card{
+    width: 180px;
+}
+.style_card{
+    font-size: 24px;
+}
+
+.title_style{
+    font-size: 15px;
+    margin-bottom: 0px;
+    color:rgba(0,0,0,.54)!important;
+}
+.info_style{
+    font-size: 15px;
+
+    
+}
+.container_info{
+    margin-bottom: 0px;
+    color: black;
+}
+.description_style{
+    font-size: 13px;
+    margin-bottom: 0px;
+    color:rgba(0,0,0,.54)!important
+}
+.author_style{
+    font-size: 16px;
+    color: inherit;
+    margin-bottom: 0px;
+}
+.date_style{
+    font-size: 13px;
+    color:rgba(0,0,0,.54)!important
+}
+.container_card{
+
+    background-color: #fafafa;
+    
+}
+
+.aticle_title{
+    padding-left: 18px;
+    font-size: 20px;
+    font-weight: bold;
+}
