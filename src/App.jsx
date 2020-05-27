@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 // External Packages
 import {
@@ -10,6 +10,7 @@ import {
 // Pages
 import Home from './pages/Home'
 import Login from './pages/Login'
+import Dashboard from './pages/Dashboard'
 
 //Function
 export default class App extends Component {
@@ -40,20 +41,17 @@ export default class App extends Component {
 
   render() {
     const { userLogedIn } = this.state
+    
     return (
       <Router>
         <div className="App">
           <Switch>
             <Route exact path="/">
               {
-                userLogedIn ? <div></div> : <Home />
+                userLogedIn ? <Dashboard /> : <Home />
               }
-              <Home />
             </Route>
             <Route exact path="/auth/login">
-              <Login />
-            </Route>
-            <Route exact path="/dashboard">
               <Login />
             </Route>
           </Switch>

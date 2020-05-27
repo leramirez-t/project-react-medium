@@ -3,30 +3,29 @@ import React from 'react'
 import './card-body-medium.css'
 import { Link } from 'react-router-dom'
 
-function CardBody ({
-
-    category,
+function CardBody({
     title,
-    description,
-    author,
-    publicationDate,
-    readTime,
-
+    image, 
+    description, 
+    author, 
+    category, 
+    estimatedReadTime, 
+    date
 }){
     return(
 
             <div className='row'>
                 <div className='container_card col-md-4'>
                 <div className='style_card'>
-                    <p className='title_style'>{category}</p>
+                <p className='title_style'>Based on your reading history</p>
                     <p className='container_info'><strong className='info_style'>{title}</strong></p>
                     <p className='description_style'>{description}</p>
-                    <p className='author_style'>{author}</p>
-                    <p className='date_style'>{publicationDate},{readTime}</p>
+                    <p className='author_style'>{author} in {category}</p>
+                    <p className='date_style'>{date},{estimatedReadTime}</p>
                 </div>
                 <div className='col-md-2'>
                     <Link to='/MediumNews'>
-                        <img className='img_card' src="https://miro.medium.com/max/1400/1*cJMe3Zyn8ord3K3wvN2i7g.jpeg" alt="card_body"/>
+                        <img className='img_card' src={image} alt="card_body"/>
                     </Link>
                 </div>
                 </div>
