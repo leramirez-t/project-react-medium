@@ -1,8 +1,5 @@
 import React, { Component } from "react"
 
-// External Packages
-import { Redirect } from "react-router-dom"
-
 // Components
 import HeaderHome from '../Home/components/Header'
 import BodyHome from '../Home/components/Body'
@@ -41,8 +38,9 @@ export default class LogIn extends Component {
       this.setState({
         success: true
       })
+    } else {
+      console.log(response.error)
     }
-    console.log(response.error)
   } 
 
   handleSubmit(event) {
@@ -57,13 +55,14 @@ export default class LogIn extends Component {
 
   render() {
     const { email, password, success } = this.state;
+    if (success) {
+      window.location.href = "/";
+    }
     return (
       <div className='contenedor'>
         <div>
           <HeaderHome />
-          <br/>
           <div className="wrapper fadeInDown">
-            {success ? <Redirect to='/' /> : null }
             <div id="formContent">
               <p>Welcome back.</p>
               <p>Sign in to get personalized story recommendations, follow authors and topics you love, and interact with stories.</p>

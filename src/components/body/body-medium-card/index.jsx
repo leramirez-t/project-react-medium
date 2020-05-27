@@ -18,7 +18,6 @@ class MediumHome extends Component {
                         <Link to='/BlogMedium'>
                             <button className='button_blog'>Learn more</button>
                         </Link>
-                    
                     </div>
                 </div>
             </div>

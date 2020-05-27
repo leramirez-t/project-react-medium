@@ -1,0 +1,24 @@
+@media (max-width: 767px) {
+  .wordMark {
+    display: none;
+  }
+  a#bookmarks, a#newPost, input#searchBox {
+    display: none;
+  }
+}
+
+input#searchBox{
+  padding-top: 2px;
+  padding-bottom: 2px;
+  width: 150px;
+  height: 25px;
+}
+
+@media (min-width: 768px) {
+  .monoGram, a#search {
+    display: none;
+  }
+  a#newPost {
+    white-space: nowrap;
+  }
+}
