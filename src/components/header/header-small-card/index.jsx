@@ -6,12 +6,12 @@ import CardAuthor from '../../Cards/card-author'
 import CardDate from '../../Cards/card-date'
 
 export default function HeaderSmallCard (props) {
-  const { title, imageUrl, description, date, author, id } = props.article
+  const { title, image, description, date, author, id } = props.article
   return (
     <Link to={`/${id}`}>
       <div className="row">
         <div className="col-4">
-          <img className='small-card-image' src={imageUrl} alt="" />
+          <img className='small-card-image' src={image} alt="" width='100%' height='50%' />
         </div>
         <div className="col-8">
           <div className="row">
