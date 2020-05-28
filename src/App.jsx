@@ -56,7 +56,12 @@ export default class App extends Component {
             <Route exact path="/auth/login">
               <Login />
             </Route>
-            <Route exact path='/:id' render={(props) => userLogedIn ? <PostDetails {...props} /> : <Home />} />
+            <Route exact path="/newpost">
+            {
+                userLogedIn ? <NewPost /> : <Home />
+              }
+            </Route>
+              <Route exact path='/:id' render={(props) => userLogedIn ? <PostDetails {...props} /> : <Home />} />
             <PostDetails />
           </Switch>
         </div>

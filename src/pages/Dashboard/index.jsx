@@ -2,11 +2,7 @@ import React, { Component } from 'react'
 import NavBar from './components/NavBar'
 import HeaderDashboard from './components/HeaderDashboard'
 import CardsBody from '../Home/components/Card_Body'
-import HeaderHome from '../Home/components/Header'
-import BodyHome from '../Home/components/Body'
-import FooterHome from '../Home/components/Footer'
 import Header from '../../components/header'
-import Article from '../../components/body/article/index.jsx'
 import Articles from '../Home/components/Articles'
 export default class Dashboard extends Component {
     constructor (props) {
