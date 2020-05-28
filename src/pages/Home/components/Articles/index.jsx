@@ -7,18 +7,18 @@ import Article from '../../../../components/body/article';
 import ArticleBlog from '../../../../components/body/blog-article';
 
 
-export default function Articles ({ title, description, estimatedReadTime, date }) {
+export default function Articles ({ title, description, estimatedReadTime, date, id }) {
   return (
-    <div>  
+    <div>
       <Article
-        
-        title = {title}
-        description= {description}
-      
-        publicationDate= {date}
-        readTime = {estimatedReadTime}
-        
+        id={id}
+        title={title}
+        description={description}
+
+        publicationDate={date}
+        readTime={estimatedReadTime}
+
       />
-    </div>  
+    </div>
   )
 }
