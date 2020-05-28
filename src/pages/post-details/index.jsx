@@ -35,20 +35,27 @@ export default class PostDetails extends Component {
         </div>
         <div className="row">
           <div className="col-12">
+            <br/>
             <h1>{this.state.post.title}</h1>
+            <br/>
           </div>
-          <div className="col-9"></div>
+        </div>
+        <div className="row">
+          <div className="col-9">
+            <h2 dangerouslySetInnerHTML={{__html:this.state.post.description}}></h2>
+          </div>
           <div className="col-3">
             <IconsSocialMedia />
           </div>
-          <div className="col-8 d-flex">
+        </div>
+        <div className="row">
+          <div className="col-12 d-flex justify-content-center">
             <img src={this.state.post.image} alt="" className='imageDetails' />
           </div>
           <div className="col-12">
-            <h3 >
-              {this.state.post.description}</h3>
+            <br/>
+            <h3 dangerouslySetInnerHTML={{__html:this.state.post.fullDescription}}></h3>
           </div>
-
         </div>
       </div>
     )

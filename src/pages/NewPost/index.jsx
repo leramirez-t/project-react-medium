@@ -22,8 +22,9 @@ export default class NewPost extends Component {
       category: '', 
       estimatedReadTime: '',
       date: '',
-      success: false,
-    };
+      fullDescription: '',
+      success: false
+    }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInput = this.handleInput.bind(this);
     this.handleServiceResponse = this.handleServiceResponse.bind(this)
@@ -47,7 +48,7 @@ export default class NewPost extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const { title, image, description, author, category, estimatedReadTime, date } = this.state;
+    const { title, image, description, author, category, estimatedReadTime, date, fullDescription } = this.state;
     const data = {
       title,
       image,
@@ -55,13 +56,14 @@ export default class NewPost extends Component {
       author,
       category, 
       estimatedReadTime,
-      date
+      date,
+      fullDescription
     }
     SubmitNewPostService(data, this.handleServiceResponse)
   }
 
   render() {
-    const { title, image, description, author, category, estimatedReadTime, date, success } = this.state;
+    const { title, image, description, author, category, estimatedReadTime, date, fullDescription, success } = this.state;
     if (success) {
       window.location.href = "/";
     }
@@ -128,6 +130,13 @@ export default class NewPost extends Component {
                   onChange={this.handleInput}
                   name={"date"}
                   placeholder={"Date"}
+                />
+                <input
+                  type={"text"}
+                  value={fullDescription}
+                  onChange={this.handleInput}
+                  name={"fullDescription"}
+                  placeholder={"Feel free to put content for your post here!"}
                 />
                 <br/>
                 <button type="submit"><h1>Submit new post!</h1></button>
