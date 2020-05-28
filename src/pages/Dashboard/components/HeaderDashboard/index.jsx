@@ -51,7 +51,7 @@ export default function HeaderDashboard(){
           </a>
         </span>
         <span class="pr-2">
-          <a data-toggle="modal" data-target="#exampleModalCenter" id="newPost" class="border rounded border-dark p-2 text-dark" href="">New Post</a>
+          <a data-toggle="modal" data-target="#exampleModalCenter" id="newPost" class="border rounded border-dark p-2 text-dark" href="/newpost">New Post</a>
         </span>
         <span>
           <a id="avatar" class="btn p-0 " aria-pressed="false" aria-haspopup="true" data-action="open-userActions">
