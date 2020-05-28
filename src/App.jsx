@@ -12,6 +12,7 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
 import PostDetails from './pages/post-details';
+import NewPost from './pages/NewPost';
 
 //Function
 export default class App extends Component {
@@ -55,7 +56,7 @@ export default class App extends Component {
             <Route exact path="/auth/login">
               <Login />
             </Route>
-            <Route exact path='/:id' render={(props) => <PostDetails {...props} />} />
+            <Route exact path='/:id' render={(props) => userLogedIn ? <PostDetails {...props} /> : <Home />} />
             <PostDetails />
           </Switch>
         </div>
