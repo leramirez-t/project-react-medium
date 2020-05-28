@@ -11,6 +11,7 @@ import {
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
+import NewPost from './pages/NewPost';
 
 //Function
 export default class App extends Component {
@@ -53,6 +54,11 @@ export default class App extends Component {
             </Route>
             <Route exact path="/auth/login">
               <Login />
+            </Route>
+            <Route exact path="/newpost">
+            {
+                userLogedIn ? <NewPost /> : <Home />
+              }
             </Route>
           </Switch>
         </div>
