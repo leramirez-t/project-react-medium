@@ -26,7 +26,7 @@ export default class Dashboard extends Component {
                 console.log('[POSTS]:', posts)
                 var articlesArray = posts.map((post) => {
                     return {
-                        id: post.id,
+                        id: post._id,
                         title: post.title,
                         image: post.image,
                         description: post.description,
@@ -45,16 +45,16 @@ export default class Dashboard extends Component {
     _renderArticle () {
         const { articles } = this.state;
         console.log('[_render]:', articles)
-        return articles.slice(5).map(({ key, title, image, description, author, category, estimatedReadTime, date }) => {
-            return <CardsBody key={key} title={title} description={description} image={image} author={author} category={category} date={date} estimatedReadTime={estimatedReadTime} />
+        return articles.slice(5).map(({ key, title, image, description, author, category, estimatedReadTime, date, id }) => {
+            return <CardsBody key={key} title={title} description={description} image={image} author={author} category={category} date={date} estimatedReadTime={estimatedReadTime} id={id} />
         })
     }
 
-    renderArt(){
+    renderArt () {
         const { articles } = this.state;
         console.log('[_render]:', articles)
-        return articles.slice(5).map(({ key, title, image, description, author, category, estimatedReadTime, date }) => {
-            return <Articles key={key} title={title} description={description} image={image} author={author} category={category} date={date} estimatedReadTime={estimatedReadTime} />
+        return articles.slice(5).map(({ key, title, image, description, author, category, estimatedReadTime, date, id }) => {
+            return <Articles key={key} title={title} description={description} image={image} author={author} category={category} date={date} estimatedReadTime={estimatedReadTime} id={id} />
         })
     }
 
@@ -78,11 +78,11 @@ export default class Dashboard extends Component {
                     <div className='row'>
                         <div className='col-md-6'>
                             {this._renderArticle()}
-                            
+
                         </div>
-                    
+
                         <div className='col-md-6'>
-                        <span className='aticle_title'>Popular on Medium</span>
+                            <span className='aticle_title'>Popular on Medium</span>
                             {this.renderArt()}
                         </div>
                     </div>

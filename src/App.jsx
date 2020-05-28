@@ -11,12 +11,13 @@ import {
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
+import PostDetails from './pages/post-details';
 import NewPost from './pages/NewPost';
 
 //Function
 export default class App extends Component {
 
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       userLogedIn: false
@@ -24,7 +25,7 @@ export default class App extends Component {
     this.logOut = this.logOut.bind(this)
   }
 
-  componentDidMount() {
+  componentDidMount () {
     const authToken = localStorage.getItem('authTokenUser')
     if (authToken) {
       this.setState({
@@ -33,16 +34,16 @@ export default class App extends Component {
     }
   }
 
-  logOut() {
+  logOut () {
     localStorage.removeItem('authTokenUser')
     this.setState({
       userLogedIn: false
     })
   }
 
-  render() {
+  render () {
     const { userLogedIn } = this.state
-    
+
     return (
       <Router>
         <div className="App">
@@ -55,11 +56,8 @@ export default class App extends Component {
             <Route exact path="/auth/login">
               <Login />
             </Route>
-            <Route exact path="/newpost">
-            {
-                userLogedIn ? <NewPost /> : <Home />
-              }
-            </Route>
+            <Route exact path='/:id' render={(props) => userLogedIn ? <PostDetails {...props} /> : <Home />} />
+            <PostDetails />
           </Switch>
         </div>
       </Router>
