@@ -4,16 +4,20 @@ import React from 'react'
 import './HeaderDashboard.css'
 
 // Logo
-import monoGram from './assets/monogram/Monogram.png'
-import wordMark from './assets/wordmark/Wordmark_Black.png'
+/*import monoGram from './assets/monogram/Monogram.png'
+import wordMark from './assets/wordmark/Wordmark_Black.png'*/
+import redpoint from './assets/monogram/rp-logo.png'
 
 export default function HeaderDashboard(){
   return(
     <div class="row d-flex justify-content-around align-items-center px-3 mx-3">
       <div class="col-6 py-2">
-        <div>
-        <a href="/"><img className="monoGram" src={monoGram} alt="Medium" height="35"/></a>
-        <a href="/"><img className="wordMark" src={wordMark} alt="Medium" height="22"/></a>
+        <div>  
+        <a href="/"><img className="redpoint" src={redpoint} alt="RedPoint" height="40"/></a>
+        
+    {/* <a href="/"><img className="monoGram" src={monoGram} alt="Medium" height="35"/></a>
+        <a href="/"><img className="wordMark" src={wordMark} alt="Medium" height="22"/></a>  ESTA ES LA VERSION ORIGINAL DEL PROYECTO MEDIUM  */}
+        
         </div>
       </div>
       <div class="col-6 py-2 d-flex justify-content-end align-items-center">
@@ -51,7 +55,8 @@ export default function HeaderDashboard(){
           </a>
         </span>
         <span class="pr-2">
-          <a data-toggle="modal" data-target="#exampleModalCenter" id="newPost" class="border rounded border-dark p-2 text-dark" href="/newpost">New Post</a>
+            <a data-toggle="/" data-target="#exampleModalCenter" id="newPost" class="border rounded border-dark p-2 text-dark" href="/newpost">New Post</a>
+          {/*<a data-toggle="/" data-target="#exampleModalCenter" id="newPost" class="border rounded border-dark p-2 text-dark" href="/newpost">New Post</a>*/}
         </span>
         <span>
           <a href="/" id="avatar" class="btn p-0 " aria-haspopup="true" data-action="open-userActions">

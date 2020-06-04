@@ -51,6 +51,52 @@ h2 {
   box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
   text-align: center;
 }
+#formPost {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: #f3f4f8;
+  padding: 30px;
+  width: 90%;
+  max-width: 900px;
+  position: relative;
+  padding: 0px;
+  /*-webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);*/
+  /*box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);*/
+  text-align: center;
+}
+.titlePost{
+  text-align: left;
+  color: red;
+  font-weight: bold;
+}
+.subtitlePost{
+  text-align: left;
+  color: red;
+  font-weight: bold;
+  margin-left: 70px;
+}
+.postSubmit{
+  border-radius: 20px;
+  width: 25%;
+  background-color: red;
+  color: white;
+  border-bottom: 20px;
+  height: 45px;
+}
+.rp_nav{
+  border-top: 5px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #999;
+  background-color: white;
+ 
+}
+
+
+#escribe{
+  height: 200px;
+}
+
 
 #formFooter {
   background-color: #f6f6f6;
@@ -154,6 +200,7 @@ input[type=text]:placeholder {
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  background-color: #f3f4f8;
 }
 
 @-webkit-keyframes fadeInDown {

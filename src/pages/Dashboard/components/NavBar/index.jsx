@@ -7,7 +7,7 @@ import './NavBar.css';
 export default function NavBar() {
   return (
     <div class="row d-flex justify-content-center px-3 m-0">
-      <div class="navBar">
+      {/*<div class="navBar">
         <Link to="/">HOME</Link>
         <a href="https://coronavirus.medium.com/">CORONAVIRUS BLOG</a>
         <a href="https://onezero.medium.com/">ONEZERO</a>
@@ -20,7 +20,7 @@ export default function NavBar() {
         <a href="https://level.medium.com/">LEVEL</a>
         <a href="https://heated.medium.com/">HEATED</a>
         <a href="https://medium.com/topics">MORE</a>
-      </div>
+  </div>*/}
     </div>
   )
 }

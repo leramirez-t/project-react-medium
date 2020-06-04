@@ -22,3 +22,7 @@ input#searchBox{
     white-space: nowrap;
   }
 }
+
+.colorHeader{
+  background-color: white;
+}

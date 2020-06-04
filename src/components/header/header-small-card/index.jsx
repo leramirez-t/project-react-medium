@@ -10,9 +10,9 @@ export default function HeaderSmallCard (props) {
   return (
     <Link to={`/${id}`}>
       <div className="row">
-        <div className="col-4">
+        {/*<div className="col-4">
           <img className='small-card-image' src={image} alt="" width='100%' height='50%' />
-        </div>
+  </div>
         <div className="col-8">
           <div className="row">
             <div className="col-12">
@@ -28,7 +28,7 @@ export default function HeaderSmallCard (props) {
               <CardDate date={date} />
             </div>
           </div>
-        </div>
+        </div>*/}
       </div>
     </Link>
   )
